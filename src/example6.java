@@ -11,5 +11,11 @@ public class example6 {
         int y=input.nextInt();
         int  x1=0,y1=0,r1=10;
         double r=Math.pow((x-x1)*(x-x1)+(y-y1)*(y-y1),0.5);
+        if(r>10){
+            System.out.println("point is not in the circle");
+        }
+        else{
+            System.out.println("point is in the circle");
+        }
     }
 }
