@@ -6,15 +6,14 @@ import java.util.Scanner;
 public class example7 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("输入十bai字坐标系中du的一个点zhi，例如dao 4 5 ：");
+        System.out.print("Enter a point with two coordinates:");
         double x = input.nextDouble();
         double y = input.nextDouble();
-        double distance = Math.pow((x * x + y * y) , 0.5);
-        if (distance <= 10) {
-            System.out.println("点" + "(" + x + "," + y + ")" + " 在圆内答");
+        if(x>-5 &&x<5 &&y>-2.5&&y<2.5){
+            System.out.println("point is in the rectangle");
         }
         else{
-            System.out.println("点" + "(" + x + "," + y + ")" + " 不在圆内");
+            System.out.println("point is not in the rectangle");
         }
     }
 }

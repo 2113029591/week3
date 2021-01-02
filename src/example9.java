@@ -6,17 +6,15 @@ import java.util.Scanner;
 public class example9 {
     public static void main(String[] args) {
         Scanner input = new java.util.Scanner(System.in);
-        System.out.println("Enter a point's x- and y- coordinates: ");
+        System.out.print("Enter a point's x- and y- coordinates: ");
         double x =input.nextDouble();
         double y =input.nextDouble();
-
-
         if (x > 200 || x < 0 || y > 100 || y < 0){
             System.out.println("The point is not in the triangle");
         }
         else {
-            double slope = (200.0 - 0) / (0 - 100.0);
-            double x1 = x + -y * slope;
+            double t = (200.0 - 0) / (0 - 100.0);
+            double x1 = x + -y * t;
             if (x1 <= 200){
                 System.out.println("The point is in the triangle");
             }
@@ -24,7 +22,5 @@ public class example9 {
                 System.out.println("The point is not in the triangle");
             }
         }
-
-
     }
 }

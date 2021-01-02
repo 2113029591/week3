@@ -19,8 +19,20 @@ public class example10 {
         double w2 = input.nextDouble();
         double h2 =input.nextDouble();
 
-        double xDistance = x1 -x2 >=0 ? x1-x2 : x2-x1;
-        double yDistance = y1-y2 >=0? y1-y2 : y2-y1;
+        double xDistance =0;
+        double yDistance =0;
+        if(x1 -x2 >=0){
+            xDistance=x1 -x2;
+        }
+        else{
+            xDistance=x2 -x1;
+        }
+        if(y1-y2 >=0){
+            yDistance=y1-y2;
+        }
+        else{
+            yDistance=y2-y1;
+        }
 
         if (xDistance <= (w1 - w2) / 2 && yDistance <= (h1 - h2) / 2){
             System.out.println("r2 is inside r1");

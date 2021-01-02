@@ -5,38 +5,34 @@ import java.util.Scanner;
 public class example11 {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
-        System.out.println("请输入第一个圆的x坐标：");
-        int x1=input.nextInt();
-        System.out.println("请输入第一个圆的y坐标：");
-        int y1=input.nextInt();
-        System.out.println("请输入第一个圆的半径：");
-        int r1=input.nextInt();
-        System.out.println("请输入第二个圆的x坐标：");
-        int x2=input.nextInt();
-        System.out.println("请输入第二个圆的y坐标：");
-        int y2=input.nextInt();
-        System.out.println("请输入第二个圆的半径：");
-        int r2=input.nextInt();
-        int rMin=(int) Math.pow(r1-r2,2);
-        int rMax=(int) Math.pow(r1+r2,2);
-        int copyR=(int)(Math.pow(x1-x2,2)+Math.pow(y1-y2, 2));
+        System.out.print("Enter circle1's center x-, y-coordi nates, and radius:");
+        double x1=input.nextDouble();
+        double y1=input.nextDouble();
+        double r1=input.nextDouble();
+        System.out.print("Enter circle2 's center x-, y-coordinates, and radius");
+        double x2=input.nextDouble();
+        double y2=input.nextDouble();
+        double r2=input.nextDouble();
+        double rMin=Math.pow(r1-r2,2);
+        double rMax=Math.pow(r1+r2,2);
+        double copyR=(Math.pow(x1-x2,2)+Math.pow(y1-y2, 2));
         if(rMin>copyR&&r2<r1)
         {
-            System.out.println("第二个圆在第一个圆内");
+            System.out.println("circle2 is inside circle1");
         }
         else if(rMin==copyR)
         {
-            System.out.println("两圆相切");
+            System.out.println("circle2 is inside circle1");
         }
         else if(copyR>rMin&&copyR<rMax){
-            System.out.println("两圆相交");
+            System.out.println("circle2 overlaps circle1");
         }
         else if(copyR==rMax)
         {
-            System.out.println("两圆外切");
+            System.out.println("circle2 overlaps circle1");
         }else if(copyR>rMax)
         {
-            System.out.println("两圆相离");
+            System.out.println("circle2 does not overlap circle1");
         }
     }
 
